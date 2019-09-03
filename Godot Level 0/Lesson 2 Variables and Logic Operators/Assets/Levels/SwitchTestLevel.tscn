@@ -1,0 +1,209 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Assets/Props/Switches/Switch.tscn" type="PackedScene" id=1]
+
+[sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="Animation" id=7]
+resource_name = "switch_a"
+length = 8.0
+
+[sub_resource type="Animation" id=8]
+resource_name = "switch_b"
+
+[sub_resource type="Animation" id=9]
+resource_name = "switch_c"
+
+[sub_resource type="SpatialMaterial" id=3]
+transmission_enabled = true
+transmission = Color( 0.686275, 0.843137, 0.768627, 1 )
+
+[sub_resource type="CubeMesh" id=4]
+material = SubResource( 3 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "On"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -0.28081, 0 ), Vector3( 0, 0.2935, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "off"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0.2935, 0 ), Vector3( 0, -0.281, 0 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "On"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -0.28081, 0 ), Vector3( 0, 0.2935, 0 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "off"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0.2935, 0 ), Vector3( 0, -0.281, 0 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "On"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -0.28081, 0 ), Vector3( 0, 0.2935, 0 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "off"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0.2935, 0 ), Vector3( 0, -0.281, 0 ) ]
+}
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 170.404
+margin_top = 403.351
+margin_right = 868.404
+margin_bottom = 417.351
+text = "Press A                                                                    Press B                                                                 Press C"
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 1.06581e-014, 0, 1, 0, -1.06581e-014, 0, 1, -0.183719, 1.83178, 0.446751 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CSGMesh_Floor" type="CSGMesh" parent="."]
+transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, -0.0092684, 1.19209e-007, 0.00106478 )
+mesh = SubResource( 1 )
+
+[node name="CSGMesh_Cube" type="CSGMesh" parent="."]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 3.89175, -7.23831 )
+mesh = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CSGMesh_Cube"]
+anims/switch_a = SubResource( 7 )
+anims/switch_b = SubResource( 8 )
+anims/switch_c = SubResource( 9 )
+
+[node name="Switch" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, -3.18049, 1.83178, -3.86062 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Switch"]
+transform = Transform( 0.114384, 0, -8.89621e-009, 0, 0.375654, 0, -8.89621e-009, 0, 0.317906, 0, 0.2935, 0 )
+mesh = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Switch/CSGMesh"]
+anims/On = SubResource( 5 )
+anims/off = SubResource( 6 )
+
+[node name="Switch2" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, -0.338164, 1.83178, -3.86062 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Switch2"]
+transform = Transform( 0.114384, 0, -8.89621e-009, 0, 0.375654, 0, -8.89621e-009, 0, 0.317906, 0, 0.2935, 0 )
+mesh = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Switch2/CSGMesh"]
+anims/On = SubResource( 10 )
+anims/off = SubResource( 11 )
+
+[node name="Switch3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, 2.7729, 1.83178, -3.86062 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Switch3"]
+transform = Transform( 0.114384, 0, -8.89621e-009, 0, 0.375654, 0, -8.89621e-009, 0, 0.317906, 0, 0.2935, 0 )
+mesh = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Switch3/CSGMesh"]
+anims/On = SubResource( 12 )
+anims/off = SubResource( 13 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.485273, 0.874363, 0, -0.874363, 0.485273, -2.98512, 6.60699, 0 )
+light_color = Color( 0.741176, 0.913725, 0.203922, 1 )
+light_energy = 3.1
+spot_range = 9.14391
+spot_angle = 15.2781
+
+[node name="SpotLight2" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.485273, 0.874363, 0, -0.874363, 0.485273, -0.192666, 6.60699, 0 )
+light_color = Color( 0.701961, 0.25098, 0.862745, 1 )
+light_energy = 3.1
+spot_range = 9.14391
+spot_angle = 15.2781
+
+[node name="SpotLight3" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.485273, 0.874363, 0, -0.874363, 0.485273, 2.1985, 6.60699, 0 )
+light_color = Color( 0.317647, 0.8, 0.121569, 1 )
+light_energy = 3.1
+spot_range = 9.14391
+spot_angle = 15.2781
+
+[node name="SpotLight4" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.785935, 0.61831, 0, -0.61831, 0.785935, -0.0329404, 8.55103, -4.58478 )
+light_energy = 3.1
+spot_range = 11.5625
+spot_angle = 59.184
+
