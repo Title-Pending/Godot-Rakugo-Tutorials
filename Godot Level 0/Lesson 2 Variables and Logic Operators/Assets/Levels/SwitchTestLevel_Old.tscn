@@ -129,13 +129,13 @@ margin_bottom = 417.351
 text = "Press A                                                                    Press B                                                                 Press C"
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 1.06581e-014, 0, 1, 0, -1.06581e-014, 0, 1, -0.183719, 1.83178, 0.446751 )
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -0.183719, 1.83178, 0.446751 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="CSGMesh_Floor" type="CSGMesh" parent="."]
-transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, -0.0092684, 1.19209e-007, 0.00106478 )
+transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, -0.0092684, 1.19209e-07, 0.00106478 )
 mesh = SubResource( 1 )
 
 [node name="CSGMesh_Cube" type="CSGMesh" parent="."]
@@ -148,10 +148,10 @@ anims/switch_b = SubResource( 4 )
 anims/switch_c = SubResource( 5 )
 
 [node name="Switch" parent="." instance=ExtResource( 2 )]
-transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, -3.18049, 1.83178, -3.86062 )
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, -3.18049, 1.83178, -3.86062 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Switch"]
-transform = Transform( 0.114384, 0, -8.89621e-009, 0, 0.375654, 0, -8.89621e-009, 0, 0.317906, 0, 0.2935, 0 )
+transform = Transform( 0.114384, 0, -8.89621e-09, 0, 0.375654, 0, -8.89621e-09, 0, 0.317906, 0, 0.2935, 0 )
 mesh = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Switch/CSGMesh"]
@@ -159,10 +159,10 @@ anims/On = SubResource( 8 )
 anims/off = SubResource( 9 )
 
 [node name="Switch2" parent="." instance=ExtResource( 2 )]
-transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, -0.338164, 1.83178, -3.86062 )
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, -0.338164, 1.83178, -3.86062 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Switch2"]
-transform = Transform( 0.114384, 0, -8.89621e-009, 0, 0.375654, 0, -8.89621e-009, 0, 0.317906, 0, -0.277552, 0 )
+transform = Transform( 0.114384, 0, -8.89621e-09, 0, 0.375654, 0, -8.89621e-09, 0, 0.317906, 0, -0.277552, 0 )
 mesh = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Switch2/CSGMesh"]
@@ -170,10 +170,10 @@ anims/On = SubResource( 10 )
 anims/off = SubResource( 11 )
 
 [node name="Switch3" parent="." instance=ExtResource( 2 )]
-transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, 2.7729, 1.83178, -3.86062 )
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 2.7729, 1.83178, -3.86062 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Switch3"]
-transform = Transform( 0.114384, 0, -8.89621e-009, 0, 0.375654, 0, -8.89621e-009, 0, 0.317906, 0, -0.269012, 0 )
+transform = Transform( 0.114384, 0, -8.89621e-09, 0, 0.375654, 0, -8.89621e-09, 0, 0.317906, 0, -0.28081, 0 )
 mesh = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Switch3/CSGMesh"]
@@ -206,4 +206,3 @@ transform = Transform( 1, 0, 0, 0, 0.785935, 0.61831, 0, -0.61831, 0.785935, -0.
 light_energy = 3.1
 spot_range = 11.5625
 spot_angle = 59.184
-

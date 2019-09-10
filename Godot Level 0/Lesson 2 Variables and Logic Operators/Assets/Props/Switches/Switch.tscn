@@ -11,4 +11,3 @@ points = PoolVector3Array( -0.0648689, 1, 0.597406, -0.0290008, 1, 0.333333, -0.
 
 [node name="CollisionShape" type="CollisionShape" parent="Cube/StaticBody" index="0"]
 shape = SubResource( 1 )
-
