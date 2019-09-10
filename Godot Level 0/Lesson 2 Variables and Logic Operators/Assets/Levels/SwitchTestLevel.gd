@@ -1,23 +1,31 @@
 extends Spatial
 
-var a = 0
+var a = false
+var b = false
+var c = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
 # Called when the node enters the scene tree for the first time.
 func _process(delta):
-	if Input.is_action_pressed("switch_a"): 
-		$Switch/CSGMesh/AnimationPlayer.play("On")
+	if Input.is_action_just_pressed("switch_a"): 
+		a = !a
+		anim($Switch/CSGMesh/AnimationPlayer, a)
+		return
+
+	if Input.is_action_just_pressed("switch_b"): 
+		b = !b
+		anim($Switch2/CSGMesh/AnimationPlayer, b)
+		return
 		
-	if  a == 1 and Input.is_action_pressed ("switch_a"):
-		$Switch/CSGMesh/AnimationPlayer.play("off")
-
-	if Input.is_action_pressed("switch_b"): 
-		$Switch2/CSGMesh/AnimationPlayer.play("On")
-	if Input.is_action_pressed("switch_c"): 
-		$Switch3/CSGMesh/AnimationPlayer.play("On")
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	if Input.is_action_just_pressed("switch_c"): 
+		c = !c
+		anim($Switch3/CSGMesh/AnimationPlayer, c)
+		return
+	
+func anim(anim, value):
+	if value:
+		anim.play("On")
+	else:
+		anim.play("off")

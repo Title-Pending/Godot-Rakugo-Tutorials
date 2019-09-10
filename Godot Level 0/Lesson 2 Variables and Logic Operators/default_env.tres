@@ -6,4 +6,3 @@
 background_mode = 1
 background_sky = SubResource( 1 )
 background_color = Color( 0.180392, 0.0941176, 0.0941176, 1 )
-
