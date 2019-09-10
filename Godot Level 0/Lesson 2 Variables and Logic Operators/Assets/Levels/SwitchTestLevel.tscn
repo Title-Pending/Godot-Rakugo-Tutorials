@@ -182,6 +182,7 @@ anims/off = SubResource( 13 )
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.485273, 0.874363, 0, -0.874363, 0.485273, -2.98512, 6.60699, 0 )
+visible = false
 light_color = Color( 0.741176, 0.913725, 0.203922, 1 )
 light_energy = 3.1
 spot_range = 9.14391
@@ -189,6 +190,7 @@ spot_angle = 15.2781
 
 [node name="SpotLight2" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.485273, 0.874363, 0, -0.874363, 0.485273, -0.192666, 6.60699, 0 )
+visible = false
 light_color = Color( 0.701961, 0.25098, 0.862745, 1 )
 light_energy = 3.1
 spot_range = 9.14391
@@ -196,6 +198,7 @@ spot_angle = 15.2781
 
 [node name="SpotLight3" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.485273, 0.874363, 0, -0.874363, 0.485273, 2.1985, 6.60699, 0 )
+visible = false
 light_color = Color( 0.317647, 0.8, 0.121569, 1 )
 light_energy = 3.1
 spot_range = 9.14391
