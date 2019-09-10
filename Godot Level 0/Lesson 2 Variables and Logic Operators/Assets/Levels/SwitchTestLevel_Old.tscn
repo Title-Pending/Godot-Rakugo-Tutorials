@@ -151,7 +151,7 @@ anims/switch_c = SubResource( 5 )
 transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, -3.18049, 1.83178, -3.86062 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Switch"]
-transform = Transform( 0.114384, 0, -8.89621e-009, 0, 0.375654, 0, -8.89621e-009, 0, 0.317906, 0, -0.28081, 0 )
+transform = Transform( 0.114384, 0, -8.89621e-009, 0, 0.375654, 0, -8.89621e-009, 0, 0.317906, 0, 0.2935, 0 )
 mesh = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Switch/CSGMesh"]
@@ -162,7 +162,7 @@ anims/off = SubResource( 9 )
 transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, -0.338164, 1.83178, -3.86062 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Switch2"]
-transform = Transform( 0.114384, 0, -8.89621e-009, 0, 0.375654, 0, -8.89621e-009, 0, 0.317906, 0, -0.28081, 0 )
+transform = Transform( 0.114384, 0, -8.89621e-009, 0, 0.375654, 0, -8.89621e-009, 0, 0.317906, 0, -0.277552, 0 )
 mesh = SubResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Switch2/CSGMesh"]
