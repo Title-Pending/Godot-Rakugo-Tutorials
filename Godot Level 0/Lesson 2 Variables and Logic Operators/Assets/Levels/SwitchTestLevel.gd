@@ -30,6 +30,7 @@ func _process(delta):
 		$Switch3/SpotLight3.visible = !$Switch3/SpotLight3.visible
 		anim($Switch3/CSGMesh/AnimationPlayer, c)
 		$CSGMesh_Cube/BlockAniC.play ("Move")
+		#Note BlockAniC intergrates Bolck animation without an animation tree. 
 		return
 	
 func anim(anim, value):
